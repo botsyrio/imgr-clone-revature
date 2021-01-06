@@ -1,0 +1,7 @@
+.likeDiv{
+    display: flexbox;
+    flex-direction: row;
+}
+#alreadyLikedBttn{
+    background-color: green;
+}

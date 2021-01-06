@@ -1,0 +1,14 @@
+<h2>Create a New Account</h2>
+
+<form>
+
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email"[(ngModel)]="email">
+  <br>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" [(ngModel)]="password">
+
+  <input type="submit" (click)="onSubmit()">
+
+
+</form>

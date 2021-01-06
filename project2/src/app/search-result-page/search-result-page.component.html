@@ -1,0 +1,4 @@
+<h2>Albums with tag matching: {{tagName}}</h2>
+<div *ngFor="let album of searchResults">
+    <app-album-tile [album]="album"></app-album-tile>
+</div>

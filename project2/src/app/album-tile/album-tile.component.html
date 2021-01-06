@@ -1,0 +1,16 @@
+<div class = "albumTile">
+        
+    <a routerLink="/album/{{album.id}}">
+        <ng-template [ngIf]="album.images.length>0">
+            <img class="imageTileimg" src="{{album.images[0].imgUrl}}" alt="{{album.images[0].caption}}"/>
+        </ng-template>
+    </a>
+    <div class="albumInfo">
+
+        
+        <div class="albumTitle"><a routerLink="/album/{{album.id}}"><h5>{{album.title}}</h5></a></div>
+        <div class="albumDetails">
+            <div class="commentCount"  >{{album.comments.length}} Comments</div>
+        </div>
+    </div>
+</div>

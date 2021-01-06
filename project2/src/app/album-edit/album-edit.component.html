@@ -1,0 +1,52 @@
+
+<div class="col-1">
+        <div class="row">
+        <form (ngSubmit)="onDeleteSubmit(idToDelete)">
+                        <input type="number" name="idToDelete" [(ngModel)]="idToDelete">
+                        <button type="submit" (submit)="onDeleteSubmit(idToDelete)"
+                                >Delete</button>
+        </form>
+        </div>
+
+    <h5 class="row">Add an Image to Album: {{this.album.albumTitle}}</h5>
+
+    <div class="row">
+        <form  (ngSubmit)="onSubmit()">
+          <div class="row"> 
+            <input type="file" name="profile" (change)="onFileSelect($event)" />
+            <br><br>
+            <label class="row">Caption for New Image: </label>
+            <input class="row" type="text" name="imageCaption" [(ngModel)]="imageCaption" />
+          </div>
+          <br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</div>
+<br>
+
+<div class="col-2">
+        <div class="row" *ngIf="album">
+                <h2>{{album.albumTitle}}</h2>
+                <h3>Created: {{album.dateCreated | date:'short'}}</h3>
+                <div class="column" *ngFor="let imagePath of album.images">
+                        <div class="listItem">
+                                <h3>{{imagePath.caption}}</h3>
+                                <h5>id: {{imagePath.id}}</h5>
+                                <img class="img" src={{imagePath.imgUrl}} />
+                                <h5>Submitted: {{imagePath.dateSubmitted | date:'short'}}</h5>
+                                        
+                        </div>
+                </div>
+        </div>
+</div>
+<div class="col-3">
+  <h2 class="row">Add a new Tag for the Album: {{this.album.albumTitle}}</h2>
+    <div>
+      <label>Your new tag: </label>
+      <br>
+      <input type="text" name="tag" [(ngModel)]="newTag">
+      <br>
+      <button type="submit" (click)="tagSubmit()">Submit new tag</button>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+datasource.properties
+/target/
+/.idea/
+/src/main/resources/AwsCredentials.properties

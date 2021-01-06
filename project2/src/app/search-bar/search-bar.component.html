@@ -1,0 +1,6 @@
+<div class="search">
+    <form class="searchForm" #searchForm="ngForm" novalidate>
+        <input [(ngModel)]="tagName" type="text" name="tagName" id="tagName" minlength="1">
+        <button [disabled]="!searchForm.valid" (click)="onSubmitClick(searchForm)">Search</button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<h2>Welcome to Imgur Clone!</h2>
+<div>
+    <div *ngFor="let album of homepageAlbums">
+        <div class="row">
+            <div class="col-1"></div>
+            <app-album-tile class="col-2" [album]="album"></app-album-tile>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngFor="let album of homepageAlbums">
+    <div class = "albumTile">
+        <div class = "frontPic">
+            <img src="{{album.images[0].imgUrl}}" alt="{{album.images[0].caption}}"/>
+        </div>
+        <div class="albumInfo">
+            <div class="albumTitle"><h5>{{album.title}}</h5></div>
+            <div class="albumDetails">
+                <div class="userCount">{{album.upvoteCount}} Upvotes</div>
+                <div class="commentCount">{{album.comments.length}} Comments</div>
+            </div>
+        </div>
+    </div>
+</div> -->

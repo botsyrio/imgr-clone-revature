@@ -1,0 +1,15 @@
+<div class="commentsContainer">
+    <div class="comment" *ngFor="let comment of comments">
+        <br>
+        <div class="commentBody">{{comment.body}}</div>
+        <div class="dateSubmitted">{{comment.dateSubmitted}}</div>
+    </div>
+
+    <div class="addComment" *ngIf="myUserId; else elseBlock">
+        <form class="addCommentForm"  #commentForm="ngForm" novalidate>
+            <textarea [(ngModel)]="newCommentBody" placeholder="New Comment Text" name="body" id="body" cols="30" rows="10" minlength="1" maxlength="1000" ></textarea>
+            <button [disabled]="!commentForm.valid" (click)="onSubmitClick(commentForm)">Submit</button>
+        </form>
+    </div>
+    <ng-template #elseBlock> <a routerLink = "/login">Please login to add comments.</a> </ng-template>
+</div>

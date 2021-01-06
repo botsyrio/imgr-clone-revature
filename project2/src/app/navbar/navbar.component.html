@@ -1,0 +1,22 @@
+<div class="topNavContainer">
+    <div class="topNavLogoContainer">
+        <a routerLink="/">
+            <h3>Imgur Clone</h3>
+        </a>
+    </div>
+    <!--SEARCH COMPONENT TO GO HERE-->
+    <app-search-bar></app-search-bar>
+    <div class="topNavLinkContainer" background-color="(0,34,34)">
+        <a routerLink = "/" class="topNavLink">Home</a>
+        <ng-template [ngIf]="myUser || userService.myUser" [ngIfElse]="elseBlock">
+            <a routerLink="/myAlbums" class="topNavLink">My Albums</a>
+            <a routerLink="/myFavorites" class="topNavLink">My Favorites</a>
+            <a routerLink="/createAlbum" class="topNavLink">Create Album</a>
+            <button (click)="logout()" class="topNavLink">Logout</button>
+        </ng-template>
+        <ng-template #elseBlock>
+            <a routerLink="/login" class="topNavLink">Login</a>
+            <a routerLink="/register" class="topNavLink">Create Account</a>
+        </ng-template>
+    </div>
+</div>

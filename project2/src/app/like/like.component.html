@@ -1,0 +1,12 @@
+
+<p>{{numLikes}} likes </p>
+<ng-template [ngIf]="myUserId">
+    <div class="likeDiv">
+        <ng-template [ngIf]="!isLiked" [ngIfElse]="elseBlock">
+            <button id="addLikeBttn" (click)="likeAlbum()">👍</button>
+        </ng-template>
+        <ng-template #elseBlock>
+            <button id ="alreadyLikedBttn">👍</button>
+        </ng-template>
+    </div>
+</ng-template>

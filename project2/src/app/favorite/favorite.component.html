@@ -1,0 +1,11 @@
+<ng-template [ngIf]="myUserId">
+    <div class="favoriteDiv">
+        <p>Favorite: </p>
+        <ng-template [ngIf]="!isFavorited" [ngIfElse]="elseBlock">
+            <button id="addFavoriteBttn" (click)="favoriteAlbum()">♥</button>
+        </ng-template>
+        <ng-template #elseBlock>
+            <button id ="alreadyFavoritedBttn">✔</button>
+        </ng-template>
+    </div>
+</ng-template>

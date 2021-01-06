@@ -1,0 +1,33 @@
+.topNavContainer{
+    border-bottom: 1px solid black;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.topNavLogoContainer{
+    height: 100%;
+    display: inline-block;
+    width: min-content;
+}
+.topNavLinkContainer{
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.topNavLink{
+    margin: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    word-spacing: -4px;
+}
+
+app-search-bar{
+    
+    margin: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    word-spacing: -4px;
+}

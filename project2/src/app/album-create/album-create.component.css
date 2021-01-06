@@ -1,0 +1,35 @@
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.col-1 {
+    width: 33%;
+    min-width: 10%;
+    /* border: solid white 3px; */
+    /* background-color: rgb(0, 34, 34); */
+}
+
+.col-2 {
+    min-width: 33%;
+    width: 40%;
+    max-width: 20%;
+    padding: 3px;
+    /* border: solid black 3px; */
+    /* background-color: gray; */
+}
+
+.col-3 {
+    width: 33%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display:table;
+}
+
+.bgCol {
+    background-color: rgb(0, 34, 34);
+    /* background-color: gray; */
+} 

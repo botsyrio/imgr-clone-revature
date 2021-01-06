@@ -1,0 +1,21 @@
+<!-- <h2>Create an Album</h2> -->
+
+<div class="col-1"></div>
+<div class="col-2">
+    <div class="albumCreate" *ngIf="myUserId">
+        <form class="albumCreateForm"  #albumCreateForm="ngForm" novalidate>
+            <h2 class="row">Create an Album</h2>
+            <div class="row">
+                <label for="albumTitle" class="col-1">Album Title</label>
+                <input type="text" class="col-2" name="albumTitle" id="albumTitle" [(ngModel)]="albumTitle">
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <button [disabled]="!albumCreateForm.valid" class="col-2" (click)="onSubmitClick(albumCreateForm)">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-3"></div>
+
+

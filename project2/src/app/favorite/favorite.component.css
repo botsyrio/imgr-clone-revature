@@ -1,0 +1,7 @@
+.favoriteDiv{
+    display: flexbox;
+    flex-direction: row;
+}
+#alreadyFavoritedBttn{
+    background-color: green;
+}
